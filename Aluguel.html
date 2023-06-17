@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- GIOVANA DEMUNER -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Aluguel.layout.css">
+    <link rel="icon" href="img/LOGO.png">
+    <title>Aluguel</title>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Aluguel</b></legend>
+                <br>
+                <div class="inputBox">
+                    <label for="nome" class="labelInput">Nome </label>
+                    <input type="text" name="nome" id="nome" class="inputUser" required minlength="2" maxlength="256">
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="sobrenome"class="labelInput">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome" class="inputUser" required minlength="3" maxlength="256">  
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="telefone"class="labelInput">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required pattern="\(\d{2}\)\d{4}-\d{4}">
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="cpf"class="labelInput">CPF</label>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                </div>
+                <br>
+                <label for="numero_do_cartao" class="labelInput"> Número do cartão:</b></label>
+                <input type="text" name="numero_do_cartao" id="numero_do_cartao"  required pattern="\d{4} \d{4} \d{4} \d{4}">
+                <br><br>
+                <div class="inputBox">
+                    <label for="data_de_validade(mm/aa)"class="labelInput">Data de validade</label>
+                    <input type="date" name="data_de_validade(mm/aa)" id="data_de_validade(mm/aa)" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="codigo_de_seguranca"class="labelInput">Código de segurança(CVV)</label>
+                    <input type="text" name="codigo_de_seguranca" id="codigo_de_seguranca" class="inputUser" required minlength="3" maxlength="3">                   
+                </div>
+                <p><b>Escolha sua forma de pagamento preferida:</b></p>
+                <input type="radio" id="credito" name="pagamento" value="credito" required>
+                <label for="credito">Crédito</label>
+                <br>
+                <input type="radio" id="debito" name="pagamento" value="debito" required>
+                <label for="debito">Débito</label>
+                <br>
+                <input type="radio" id="outra" name="pagamento" value="outra" required>
+                <label for="outra">Outra</label>
+                <br><br>
+                <button onclick="validarCPF()">Cadastrar</button>
+
+            </fieldset>
+        </form>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
